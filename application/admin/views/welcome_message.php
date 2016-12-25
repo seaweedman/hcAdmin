@@ -23,9 +23,7 @@
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
 <![endif]-->
-<title>H-ui.admin v2.5</title>
-<meta name="keywords" content="H-ui.admin v2.5,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
-<meta name="description" content="H-ui.admin v2.5，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+<title>圣光爱德</title>
 </head>
 <body>
 <header class="navbar-wrapper">
@@ -53,7 +51,7 @@
 			<dt><i class="Hui-iconfont">&#xe616;</i> 公司概况<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="<?php echo site_url('Login/index'); ?>" data-title="资讯管理" href="javascript:void(0)">资讯管理</a></li>
+					<li><a data-href="<?php echo site_url('Company/index'); ?>" data-title="公司概况" href="javascript:void(0)">公司概况</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -61,7 +59,7 @@
 			<dt><i class="Hui-iconfont">&#xe613;</i> 新闻动态<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="picture-list.html" data-title="图片管理" href="javascript:void(0)">图片管理</a></li>
+					<li><a data-href="<?php echo site_url('News/index'); ?>" data-title="新闻动态" href="javascript:void(0)">新闻动态</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -69,9 +67,7 @@
 			<dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="product-brand.html" data-title="品牌管理" href="javascript:void(0)">品牌管理</a></li>
-					<li><a data-href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>
-					<li><a data-href="product-list.html" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
+					<li><a data-href="<?php echo site_url('Product/index'); ?>" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -79,8 +75,7 @@
 			<dt><i class="Hui-iconfont">&#xe622;</i> 客户留言<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="http://h-ui.duoshuo.com/admin/" data-title="评论列表" href="javascript:;">评论列表</a></li>
-					<li><a data-href="feedback-list.html" data-title="意见反馈" href="javascript:void(0)">意见反馈</a></li>
+					<li><a data-href="<?php echo site_url('Contact/index'); ?>" data-title="客户留言" href="javascript:void(0)">客户留言</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -88,11 +83,7 @@
 			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
 				<ul>
-					<li><a data-href="system-base.html" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
-					<li><a data-href="system-category.html" data-title="栏目管理" href="javascript:void(0)">栏目管理</a></li>
-					<li><a data-href="system-data.html" data-title="数据字典" href="javascript:void(0)">数据字典</a></li>
-					<li><a data-href="system-shielding.html" data-title="屏蔽词" href="javascript:void(0)">屏蔽词</a></li>
-					<li><a data-href="system-log.html" data-title="系统日志" href="javascript:void(0)">系统日志</a></li>
+					<li><a data-href="<?php echo site_url('System/index'); ?>" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
 				</ul>
 			</dd>
 		</dl>
@@ -103,7 +94,7 @@
 	<div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
 		<div class="Hui-tabNav-wp">
 			<ul id="min_title_list" class="acrossTab cl">
-				<li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>
+				<li class="active"><span title="我的桌面" data-href="<?php echo site_url('Welcome/helo'); ?>">我的桌面</span><em></em></li>
 			</ul>
 		</div>
 		<div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
@@ -111,7 +102,7 @@
 	<div id="iframe_box" class="Hui-article">
 		<div class="show_iframe">
 			<div style="display:none" class="loading"></div>
-			<iframe scrolling="yes" frameborder="0" src="welcome.html"></iframe>
+			<iframe scrolling="yes" frameborder="0" src="<?php echo site_url('Welcome/helo'); ?>"></iframe>
 		</div>
 	</div>
 </section>
@@ -131,24 +122,24 @@
 <script type="text/javascript" src="<?php echo base_url('static/hui/static/h-ui/js/H-ui.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('static/hui/static/h-ui.admin/js/H-ui.admin.js'); ?>"></script>
 <script type="text/javascript">
-$(function(){
-	$(".Hui-tabNav-wp").contextMenu('myMenu1', {
-		bindings: {
-			'open': function(t) {
-				alert('Trigger was '+t.id+'\nAction was Open');
-			},
-			'email': function(t) {
-				alert('Trigger was '+t.id+'\nAction was Email');
-			},
-			'save': function(t) {
-				alert('Trigger was '+t.id+'\nAction was Save');
-			},
-			'delete': function(t) {
-				alert('Trigger was '+t.id+'\nAction was Delete')
-			}
-		}
-	});
-});
+// $(function(){
+// 	$(".Hui-tabNav-wp").contextMenu('myMenu1', {
+// 		bindings: {
+// 			'open': function(t) {
+// 				alert('Trigger was '+t.id+'\nAction was Open');
+// 			},
+// 			'email': function(t) {
+// 				alert('Trigger was '+t.id+'\nAction was Email');
+// 			},
+// 			'save': function(t) {
+// 				alert('Trigger was '+t.id+'\nAction was Save');
+// 			},
+// 			'delete': function(t) {
+// 				alert('Trigger was '+t.id+'\nAction was Delete')
+// 			}
+// 		}
+// 	});
+// });
 /*资讯-添加*/
 function article_add(title,url){
 	var index = layer.open({
