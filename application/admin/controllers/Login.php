@@ -16,24 +16,32 @@ class Login extends CI_Controller {
 	public function check() {
 		$this->load->helper('url');
 		$this->load->model('admin');
+		$this->load->library('common');
+		$this->load->library('session');
 
-        // 用户名
+        // 帐号
 		$username = $_POST['username'];
 		// 密码
 		$password = $_POST['password'];
 
+		if (empty($_POST['username'])) {
+			$this->common->false('帐号不能为空');
+		}
+		if (empty($_POST['password'])) {
+			$this->common->false('密码不能为空');
+		}
+
 		$info = $this->admin->get_admin($username);
 
 		if (empty($info)) {
-			echo '有可能是密码错了，也有可能是用户名错了，也有可能都错了';
-			die();
+			$this->common->false('帐号或密码错误');
 		}
 
 		if ($info['password'] == $password) { // 密码正确
+			$_SESSION['admin_id'] = $info['id'];
 			redirect('Welcome/index');
 		} else {
-			echo '有可能是密码错了，也有可能是用户名错了，也有可能都错了';
-			die();
+			$this->common->false('帐号或密码错误');
 		}
 	}
 }
