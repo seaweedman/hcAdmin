@@ -85,6 +85,9 @@
 				<ul>
 					<li><a data-href="<?php echo site_url('System/index'); ?>" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
 				</ul>
+				<ul>
+					<li><a data-href="<?php echo site_url('Ad/index'); ?>" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
+				</ul>
 			</dd>
 		</dl>
 	</div>

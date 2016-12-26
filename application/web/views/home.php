@@ -80,27 +80,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  </script>
 			<div  id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
+					<?php foreach($ads AS $val) { ?>
 					<li>
 						<div class="banner-info">
-								<h2>Steady <span>growth</span> for your farm!</h2>
+								<h2><?php echo $val['title']; ?></h2>
 								<div class="line"> </div>
-								<p>Ut sodales erat tortor, eget rhoncus nulla rutrum sit amet. Aliquam sit amet lorem dui. Nulla sagittis dolor id mi tincidunt varius. Donec quis suscipit tortor vel pellentesque libero</p>
+								<p><?php echo $val['summary']; ?></p>
 						</div>
 					</li>
-					<li>
-						<div class="banner-info">
-								<h2>Make your <span>garden</span> look like paradise!</h2>
-								<div class="line"> </div>
-								<p>Eget rhoncus nulla rutrum sit amet. Ut sodales erat tortor Aliquam sit amet lorem dui. Donec quis suscipit tortor vel pellentesque libero Nulla sagittis dolor id mi tincidunt varius</p>
-						</div>
-					</li>
-					<li>
-						<div class="banner-info">
-								<h2>Steady <span>growth</span> for your farm! </h2>
-								<div class="line"> </div>
-								<p>Aliquam sit amet lorem dui Ut sodales erat tortor, Nulla sagittis dolor id mi tincidunt varius. Donec quis suscipit tortor vel pellentesque libero eget rhoncus nulla rutrum sit amet</p>
-						</div>
-					</li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>
@@ -114,16 +102,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="banner-bottom-grids">
 				<div class="col-md-7 banner-bottom-grid-text">
 					<div class="jumbotron banner-bottom-left wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;	">
-					  <h3>Nullam consectetur tristique fermentum vestibulum</h3>
-						<h5>Cras porttitor imperdiet volutpat. Nulla malesuada lectus eros ut convallis felis <span>consectetur ut</span></h5>
-						<p>Proin eget ipsum ultrices, aliquet velit eget, tempus tortor. Phasellus non velit sit amet diam faucibus molestie. Mauris sapien eros, mattis et elit non, tincidunt efficitur nisi augue dui iaculis nulla, a pretium nisl turpis vel augue auctor viverra aliquam .</p>
+					  <h3>圣光爱德-公司简介</h3>
+						<h5>责任 荣誉 使命 传承</h5>
+						<p><?php echo $company['summary']; ?></p>
 						<div class="see-button">
-							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="#" role="button">See More</a>
+							<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="#" role="button">查看详情</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-5 banner-bottom-right wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
-					<img src="<?php echo base_url('static/images/2.jpg'); ?>" alt=""/>
+					<img src="<?php echo base_url($company['img_url']); ?>" alt=""/>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -136,50 +124,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- container -->
 		<div class="container">
 			<div class="col-md-5 specialty-info wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
-				<h3>Our Services</h3>
-				<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros ut convallis felis consectetur ut </h5>
-				<p>Integer vitae ligula sed lectus consectetur pellentesque blandit nec orci. Nulla ultricies nunc et lorem semper, quis accumsan dui aliquam aucibus sagittis placerat.
-					<span>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi non nibh nec enim sollicitudin interdum.tristique senectus et netus et malesuada fames ac turpis egestas</span>
-				</p>
+				<h3>我们的产品</h3>
+				<h5>工匠精神</h5>
+				<p>巴拉巴拉巴拉</p>
 				<div class="see-button">
-					<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal specialty-button" href="#" role="button">See More</a>
+					<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal specialty-button" href="#" role="button">查看更多</a>
 				</div>
 			</div>
 			<div class="col-md-7 specialty-grids">
 				<div class="specialty-grids-top">
+
+					<?php foreach($products AS $val) { ?>
 					<div class="col-md-6 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 						<figure class="icon">
-							<img src="<?php echo base_url('static/images/1.png'); ?>" alt="" />
+							<img style='width:50px;padding-top:20px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
 						</figure>
-						<h5>Proin eget ipsum ultrices</h5>
-						<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+						<h5><?php echo $val['title']; ?></h5>
+						<p><?php echo $val['summary']; ?></p>
 					</div>
-					<div class="col-md-6 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<figure class="icon">
-							<img src="<?php echo base_url('static/images/2.png'); ?>" alt="" />
-						</figure>
-						<h5>Proin eget ipsum ultrices</h5>
-						<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-					</div>
-					<div class="clearfix"> </div>
+                    <?php } ?>
 				</div>
-				<div class="specialty-grids-top">
-					<div class="col-md-6 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<figure class="icon">
-							<img src="<?php echo base_url('static/images/3.png'); ?>" alt="" />
-						</figure>
-						<h5>Proin eget ipsum ultrices</h5>
-						<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-					</div>
-					<div class="col-md-6 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-						<figure class="icon">
-							<img src="<?php echo base_url('static/images/4.png'); ?>" alt="" />
-						</figure>
-						<h5>Proin eget ipsum ultrices</h5>
-						<p>Sed ut perspiciis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
+				<!-- <div class="specialty-grids-top"> -->
+				<!-- </div> -->
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -190,12 +156,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="testimonials">
 		<div class="container">
 			<div class="testimonial-nfo wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				<h3>Testimonials</h3>
-				<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros <span>ut convallis felis consectetur ut </span></h5>
+				<h3>企业文化</h3>
+				<h5>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉吧</h5>
 			</div>
 			<div class="testimonial-grids wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<div class="testimonial-grid">
-					<p><span>"</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum iaculis diam quis sodales. Vestibulum eu dui tellus. In viverra porttitor auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas<span> "</span></p>
+					<p><span>"</span>发达散发的时发生的发达是否大师发达时发生的发达是否发达散发的散发的散发的撒发达散发的撒发达阿凡大师发达是否大师发送<span> "</span></p>
 				</div>
 			</div>
 		</div>
@@ -205,42 +171,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="news">
 		<div class="container">
 			<div class="news-text">
-				<h3>News</h3>
-				<h5>Cras porttitor imperdiet volutpat nulla malesuada lectus eros <span>ut convallis felis consectetur ut </span></h5>
+				<h3>新闻动态</h3>
+				<h5>公司最新动态</h5>
 			</div>
 			<div class="news-grids">
+				<?php foreach($news AS $val) { ?>
 				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h4>Integer vitae ligula sed lectus</h4>
-					<span>8.00 - 10.00 | JUN 09,2014</span>
-					<img src="<?php echo base_url('static/images/img1.jpg'); ?>" alt="" />
+					<h4><?php echo $val['title'] ?></h4>
+					<span><?php echo $val['create_time'] ?></span>
+					<img style='width;100px;height:100px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
 					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
+						<p><?php echo $val['summary'] ?></p>
 					</div>
 				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h4>Integer vitae ligula sed lectus<h4>
-					<span>10.00 - 12.00 | sep 24,2014</span>
-					<img src="<?php echo base_url('static/images/img2.jpg'); ?>" alt="" />
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-					</div>
-				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h4>Integer vitae ligula sed lectus</h4>
-					<span>9.00 - 10.00 | FEB 15,2014</span>
-					<img src="<?php echo base_url('static/images/img3.jpg'); ?>" alt="" />
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-					</div>
-				</div>
-				<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<h4>Integer vitae ligula sed lectus</h4>
-					<span>11.00 - 10.00 | JUN 10,2014</span>
-					<img src="<?php echo base_url('static/images/img4.jpg'); ?>" alt="" />
-					<div class="news-info">
-						<p>Pellentesque ut urna eu mauris scele risque auctor volutpat et massa pers piciis iste natus scele risque auctor volutpat et massa.</p>
-					</div>
-				</div>
+				<?php } ?>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
@@ -252,56 +196,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="col-md-6 footer-left  wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="products.html">Products</a></li>
-					<li><a href="404.html">Events</a></li>
-					<li><a href="mail.html">Mail Us</a></li>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">公司概况</a></li>
+					<li><a href="products.html">产品信息</a></li>
+					<li><a href="404.html">新闻动态</a></li>
+					<li><a href="mail.html">客户留言</a></li>
 				</ul>
 				<form>
-					<input type="text" placeholder="Email" required="">
-					<input type="submit" value="Subscribe">
+					<input type="text" placeholder="seaweedman@163.com" required="" disabled="true">
+					<input type="submit" value="留言">
 				</form>
 			</div>
 			<div class="col-md-3 footer-middle wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				<h3>Address</h3>
+				<h3>公司地址</h3>
 				<div class="address">
-					<p>756 gt globel Place,
-						<span>CD-Road,M 07 435.</span>
+					<p>经十东路
+						<span>奥体中心</span>
 					</p>
 				</div>
 				<div class="phone">
-					<p>+1(100)2345-6789</p>
+					<p>0538-5698745</p>
 				</div>
 			</div>
 			<div class="col-md-3 footer-right  wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<a href="#"><img src="<?php echo base_url('static/images/logo.jpg'); ?>" alt="" style='width:160px;'/></a>
-				<p>Proin eget ipsum ultrices, aliquet velit eget, tempus tortor. Phasellus non velit sit amet diam faucibus molestie tincidunt efficitur nisi.</p>
+				<p>圣光爱德</p>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<!-- //container -->
 	</div>
 	<!-- //footer -->
-	<div class="copyright">
-		<!-- container -->
-		<div class="container">
-			<div class="copyright-left wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-					<!-- <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a href="seaweedman.top" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p> -->
-			</div>
-			<div class="copyright-right wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				<ul>
-					<li><a href="#" class="twitter"> </a></li>
-					<li><a href="#" class="twitter facebook"> </a></li>
-					<li><a href="#" class="twitter chrome"> </a></li>
-					<li><a href="#" class="twitter pinterest"> </a></li>
-					<li><a href="#" class="twitter linkedin"> </a></li>
-					<li><a href="#" class="twitter dribbble"> </a></li>
-				</ul>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<!-- //container -->
-	</div>
 </body>
 </html>

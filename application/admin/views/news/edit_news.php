@@ -2,9 +2,16 @@
 </head>
 <body>
 <div class="page-container">
-	<form action="<?php echo site_url('Company/data_save'); ?>" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">公司简介：</label>
+	<form action="<?php echo site_url('News/data_save'); ?>" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
+        <input type='hidden' value="<?php echo empty($info['id']) ? 0 : $info['id']; ?>" name='id' />
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2">标题：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+    			<input type="text" class="input-text" placeholder="" name="title" value="<?php echo empty($info['title']) ? '' : $info['title']; ?>">
+    		</div>
+        </div>
+        <div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">简介：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<textarea name="summary" cols="" rows="" class="textarea"  placeholder="写点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="简介不能为空！" onKeyUp="textarealength(this,200)"><?php echo empty($info['summary']) ? '' : $info['summary']; ?></textarea>
 				<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
@@ -21,15 +28,15 @@
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">详细内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">图文详情：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<script id="editor" name='content' type="text/plain" style="width:100%;height:400px;"><?php echo empty($info['content']) ? '' : $info['content']; ?></script>
 			</div>
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
-				<!-- <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button> -->
+				<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+				<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
 			</div>
 		</div>
 	</form>

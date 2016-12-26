@@ -1,16 +1,16 @@
-<title>新闻动态</title>
+<title>公告动态</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 新闻动态 <span class="c-gray en">&gt;</span> 新闻动态 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 公告动态 <span class="c-gray en">&gt;</span> 公告动态 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 <div class="page-container">
 	<div class="text-c">
-		<input type="text" name="" id="" placeholder=" 新闻标题" style="width:250px" class="input-text">
-		<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜新闻</button>
+		<input type="text" name="" id="" placeholder=" 公告标题" style="width:250px" class="input-text">
+		<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜公告</button>
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20">
         <span class="l">
-            <a class="btn btn-primary radius" data-title="添加资讯" _href="article-add.html" onclick="article_edit('新闻编辑','<?php echo site_url("News/edit_news"); ?>')" href="javascript:;">
-            <i class="Hui-iconfont">&#xe600;</i> 添加新闻</a></span> <!-- <span class="r">共有数据：<strong>54</strong> 条 -->
+            <a class="btn btn-primary radius" data-title="添加公告" _href="article-add.html" onclick="article_edit('公告编辑','<?php echo site_url("ad/edit_ad"); ?>')" href="javascript:;">
+            <i class="Hui-iconfont">&#xe600;</i> 添加公告</a></span> <!-- <span class="r">共有数据：<strong>54</strong> 条 -->
         </span>
     </div>
 	<div class="mt-20">
@@ -19,7 +19,6 @@
 				<tr class="text-c">
 					<th width='100'>标题</th>
 					<th width="80">简介</th>
-					<th width='100'>添加时间</th>
 					<th width="80">操作</th>
 				</tr>
 			</thead>
@@ -28,10 +27,9 @@
 				<tr class="text-c">
 					<td><?php echo $val['title']; ?></td>
 					<td><?php echo $val['summary']; ?></td>
-					<td><?php echo $val['create_time']; ?></td>
 					<td class="f-14 td-manage">
-						<a style="text-decoration:none" class="ml-5" onClick="article_edit('新闻编辑','<?php echo site_url("News/edit_news/$val[id]"); ?>')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-						<a style="text-decoration:none" class="ml-5" onClick="article_del('<?php echo site_url("News/del_news/$val[id]"); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+						<a style="text-decoration:none" class="ml-5" onClick="article_edit('公告编辑','<?php echo site_url("ad/edit_ad/$val[id]"); ?>')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+						<a style="text-decoration:none" class="ml-5" onClick="article_del('<?php echo site_url("ad/del_ad/$val[id]"); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
 					</td>
 				</tr>
 				<?php } ?>
