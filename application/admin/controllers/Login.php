@@ -44,4 +44,16 @@ class Login extends CI_Controller {
 			$this->common->false('帐号或密码错误');
 		}
 	}
+
+	/**
+	 * 退出登录
+	 */
+	public function logout() {
+        $this->load->library('common');
+		$this->load->library('session');
+
+		session_destroy();
+
+		$this->common->success('退出成功');
+	}
 }

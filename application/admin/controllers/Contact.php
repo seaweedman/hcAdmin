@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * 新闻动态
  */
-class Contact extends CI_Controller {
+class Contact extends MY_Controller {
 
     /**
      * 新闻动态列表

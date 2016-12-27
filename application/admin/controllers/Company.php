@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * 公司概况
  */
-class Company extends CI_Controller {
+class Company extends MY_Controller {
 
     /**
      * 公司概况详情
