@@ -27,10 +27,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- banner -->
 	<div class="banner">
 		<!-- container -->
-		<div class="container">
+		<div class="container" style="background:black;width:100%;height:80px;">
 			<div class="header">
 				<div class="head-logo" >
-					<a href="index.html"><img src="<?php echo base_url('static/images/logo.jpg'); ?>" alt="圣光爱德" style='width:180px;' /></a>
+					<a href="index.html"><img src="<?php echo base_url('static/images/logo.jpg'); ?>" alt="圣光爱德" style='width:100px;' /></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu"><img src="<?php echo base_url('static/images/menu.png'); ?>" alt=""></span>
@@ -40,6 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Products/index'); ?>">产品信息<i>products</i></a></li>
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('News/index'); ?>">新闻动态<i>news</i></a></li>
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Contact/index'); ?>">客户留言<i>contact us</i></a></li>
+						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Contact/index'); ?>">关于我们<i>contact us</i></a></li>
 						<div class="clearfix"> </div>
 					</ul>
 					<!-- script-for-menu -->
@@ -56,7 +57,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 		<!-- //container -->
-		<div class="container">
+		<div class="container" style="width:100%;min-height:500px;">
 				<script src="<?php echo base_url('static/js/responsiveslides.min.js'); ?>"></script>
 					 <script>
 						// You can also use "$(window).load(function() {"
@@ -78,10 +79,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						});
 					  </script>
-			<div  id="top" class="callbacks_container">
+			<div id="top" class="callbacks_container">
 				<ul class="rslides" id="slider3">
 					<?php foreach($ads AS $val) { ?>
-					<li>
+					<li style='background:url(<?php echo base_url("/static/images/banner.jpg"); ?>) no-repeat 0px 0px #eeece9;'>
 						<div class="banner-info">
 								<h2><?php echo $val['title']; ?></h2>
 								<div class="line"> </div>

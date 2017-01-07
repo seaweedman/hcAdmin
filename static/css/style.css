@@ -10,17 +10,20 @@ body a {
   -ms-transition: 0.5s all;
 }
 .banner{
-  background: url(../images/banner.jpg) no-repeat 0px 0px #eeece9;
-  min-height: 855px;
+  /*background: url(../images/banner.jpg) no-repeat 0px 0px #eeece9;*/
+  /*min-height: 855px;*/
   background-size: cover;
   position: relative;
 }
 .head-logo{
   float: left;
+	margin-left: 40px;
+	margin-top: 2px;
 }
 .head-logo a {
   display: block;
-  margin-top: 3em;
+  /*margin-top: 3em;*/
+	margin-top:1px;
 }
 .top-nav{
   float: right;
@@ -29,6 +32,7 @@ body a {
 .top-nav ul{
 	padding:0;
 	margin:0;
+	margin-top:20px;
 }
 .top-nav ul  li{
   display: inline-block;
@@ -37,14 +41,14 @@ body a {
   float: left;
 }
 .top-nav ul  li.active{
-	background:#DC5329;	
+	background:#DC5329;
 }
 .top-nav ul li a{
   color: #FFF;
-  font-size: 18px;
+  /*font-size: 18px;*/
   margin-right: .4em;
   float: left;
-  padding: 5em 1em 3em;
+  /*padding: 5em 1em 3em;*/
 }
 .top-nav ul li a i{
   display: block;
@@ -130,7 +134,7 @@ body a {
 }
 /*-- banner-bottom --*/
 .banner-bottom{
-	
+
 }
 .banner-bottom-grids{
 	margin: 5em 0;
@@ -517,7 +521,7 @@ background: none;
   background: #dfdfdf;
   margin: 0 auto;
   text-align: center;
-  position: relative;	
+  position: relative;
 }
 .service-box .icon img {
   position: relative;
@@ -1155,7 +1159,7 @@ span.menu {
 	  padding: 1.5em 0;
 	  display: block;
 	  float: none;
-	}	
+	}
 	.top-nav ul li a i {
 		margin-top: .5em;
 	}
@@ -1339,7 +1343,7 @@ span.menu {
 	}
 	.top-nav {
 	  width: 12%;
-	}	
+	}
 	.head-logo a {
 	  margin-top: 2em;
 	}
