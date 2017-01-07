@@ -20,6 +20,25 @@ class Home extends CI_Controller {
 		// 新闻消息
 		$data['news'] = $this->news_model->get_list();
 
+        $this->load->view('header');
 		$this->load->view('home', $data);
+		$this->load->view('footer');
+	}
+
+	public function message() {
+		// 产品表
+		$this->load->model('contact_model');
+
+		// 手机号
+		$data['mobile'] = $_POST['mobile'];
+		// 邮箱
+		$data['mail'] = $_POST['mail'];
+		// 内容
+		$data['content'] = $_POST['content'];
+		// 当前时间
+		$data['create_time'] = date('Y-m-d H:i:s', time());
+
+		// 保存内容
+		$this->contact_model->add_message($data);
 	}
 }

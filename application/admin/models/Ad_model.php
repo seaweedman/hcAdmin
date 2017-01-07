@@ -5,7 +5,7 @@ class ad_model extends CI_Model {
     }
 
     /**
-     * 取得新闻一览
+     * 取得广告一览
      */
     public function get_list() {
         $query = $this->db->get_where('ad');
@@ -13,25 +13,27 @@ class ad_model extends CI_Model {
     }
 
     /**
-     * 新增新闻信息
+     * 新增广告信息
      */
-    public function sava_info() {
+    public function sava_info($img_url) {
         $data['title'] = $_POST['title'];
         $data['summary'] = $_POST['summary'];
+        $data['img_url'] = $img_url;
         return $this->db->insert('ad', $data);
     }
 
     /**
-     * 修改新闻信息
+     * 修改广告信息
      */
-    public function update_info($id) {
+    public function update_info($img_url, $id) {
         $data['title'] = $_POST['title'];
+        $data['img_url'] = $img_url;
         $data['summary'] = $_POST['summary'];
         return $this->db->update('ad', $data, array('id'=>$id));
     }
 
     /**
-     * 取得新闻信息
+     * 取得广告信息
      */
     public function get_info($id) {
         $query = $this->db->get_where('ad', array('id'=>$id));
@@ -40,7 +42,7 @@ class ad_model extends CI_Model {
     }
 
     /**
-     * 删除新闻
+     * 删除广告
      */
     public function del_info($id) {
         $this->db->delete('ad', array('id'=>$id));

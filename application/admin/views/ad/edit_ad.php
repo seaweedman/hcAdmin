@@ -2,7 +2,7 @@
 </head>
 <body>
 <div class="page-container">
-	<form action="<?php echo site_url('ad/data_save'); ?>" method="post" class="form form-horizontal" id="form-article-add" >
+	<form action="<?php echo site_url('ad/data_save'); ?>" method="post" class="form form-horizontal" id="form-article-add" enctype="multipart/form-data">
         <input type='hidden' value="<?php echo empty($info['id']) ? 0 : $info['id']; ?>" name='id' />
         <div class="row cl">
             <label class="form-label col-xs-4 col-sm-2">标题：</label>
@@ -10,6 +10,16 @@
     			<input type="text" class="input-text" placeholder="" name="title" value="<?php echo empty($info['title']) ? '' : $info['title']; ?>">
     		</div>
         </div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">展示图：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<span class="btn-upload form-group">
+				<input class="input-text upload-url" type="text" name="img_url" id="uploadfile-2" readonly datatype="*" nullmsg="请添加附件！" style="width:200px" value="<?php echo empty($info['img_url']) ? '' : $info['img_url']; ?>">
+				<a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+				<input type="file" name="img" class="input-file" multiple>
+				</span>
+			</div>
+		</div>
         <div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">简介：</label>
 			<div class="formControls col-xs-8 col-sm-9">

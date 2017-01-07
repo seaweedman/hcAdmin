@@ -54,7 +54,7 @@ class Ad extends MY_Controller {
         // 加载company模型
         $this->load->model('ad_model');
 
-        // 新闻ID
+        // 广告ID
         $id = $_POST['id'];
 
         if (empty($_POST['title'])) {
@@ -64,11 +64,36 @@ class Ad extends MY_Controller {
             $this->common->false('简介不能为空');
         }
 
-        // 保存新闻
-        if (empty($id)) {
-            $res = $this->ad_model->sava_info();
+        if (!empty($_POST['img_url']) && strstr($_POST['img_url'], 'upload/')) {
+            $img_url = $_POST['img_url'];
         } else {
-            $res = $this->ad_model->update_info($id);
+            // 上传文件类型
+            $file_type = $_FILES["img"]["type"];
+
+            // 上传图片
+            if ((($file_type == "image/gif") || ($file_type == "image/jpeg") || ($file_type == "image/png"))) {
+                if ($file_type == "image/gif") {
+                    $name = time().'.gif';
+                } elseif ($file_type == "image/jpeg") {
+                    $name = time().'.jpg';
+                } elseif (($file_type == "image/png")) {
+                    $name = time().'.png';
+                } else {
+                    $this->common->false('图片不正确');
+                }
+                move_uploaded_file($_FILES["img"]["tmp_name"], "upload/" . $name);
+            } else {
+                $this->common->false('文件格式不正确或过大');
+            }
+
+            $img_url = "upload/" . $name;
+        }
+
+        // 保存广告
+        if (empty($id)) { // 添加广告
+            $res = $this->ad_model->sava_info($img_url);
+        } else { // 修改广告
+            $res = $this->ad_model->update_info($img_url, $id);
         }
 
         if ($res !== false) {

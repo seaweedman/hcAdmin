@@ -36,9 +36,10 @@ body a {
 }
 .top-nav ul  li{
   display: inline-block;
-  width: 18%;
+  width: 5%;
   margin-right: .4em;
   float: left;
+  margin-left:5%;
 }
 .top-nav ul  li.active{
 	background:#DC5329;
@@ -571,6 +572,7 @@ color: #333333;
   margin: 0;
   line-height: 1.8em;
   font-weight: 400;
+  height:80px;
 }
 .specialty-grids-top:nth-child(2) {
   margin-top: 4em;
