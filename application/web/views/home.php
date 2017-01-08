@@ -95,15 +95,15 @@ $(function () {
 </div>
 <!-- //specialty -->
 <!-- testimonials -->
-<div class="testimonials">
+<div class="testimonials" style="background: url(<?php echo base_url($center['img_url']) ?>) no-repeat 0px 0px;background-size: cover;">
 	<div class="container">
 		<div class="testimonial-nfo wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-			<h3>企业文化</h3>
+			<h3><?php echo $center['title'] ?></h3>
 			<h5>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉吧</h5>
 		</div>
 		<div class="testimonial-grids wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 			<div class="testimonial-grid">
-				<p><span>"</span>发达散发的时发生的发达是否大师发达时发生的发达是否发达散发的散发的散发的撒发达散发的撒发达阿凡大师发达是否大师发送<span> "</span></p>
+				<p><span>" </span><?php echo $center['summary']; ?><span> "</span></p>
 			</div>
 		</div>
 	</div>
@@ -121,7 +121,7 @@ $(function () {
 			<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<h4><?php echo $val['title'] ?></h4>
 				<span><?php echo $val['create_time'] ?></span>
-				<img style='width;100px;height:100px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
+				<img style='width;280px;height:200px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
 				<div class="news-info">
 					<p><?php echo $val['summary'] ?></p>
 				</div>

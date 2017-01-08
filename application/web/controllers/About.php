@@ -7,6 +7,8 @@ class About extends CI_Controller {
         // 加载url辅助类
         $this->load->helper('url_helper');
 
+        $this->load->view('header');
 		$this->load->view('about');
+		$this->load->view('footer');
 	}
 }

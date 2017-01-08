@@ -8,7 +8,7 @@ class ad_model extends CI_Model {
      * 取得公告一览
      */
     public function get_list() {
-        $query = $this->db->get_where('ad');
+        $query = $this->db->get_where('ad', 'id<>1');
         return $query->result_array();
     }
 
@@ -21,5 +21,13 @@ class ad_model extends CI_Model {
         return $query->row_array();
     }
 
+    /**
+     * 取得企业宣传
+     */
+    public function get_one() {
+        $query = $this->db->get_where('ad', 'id=1');
+
+        return $query->row_array();
+    }
 }
 ?>

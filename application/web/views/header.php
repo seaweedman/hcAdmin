@@ -40,7 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Products/index'); ?>">产品信息<i>products</i></a></li>
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('News/index'); ?>">新闻动态<i>news</i></a></li>
 						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Contact/index'); ?>">客户留言<i>contact us</i></a></li>
-						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Contact/index'); ?>">关于我们<i>contact us</i></a></li>
+						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('About/index'); ?>">关于我们<i>contact us</i></a></li>
 						<div class="clearfix"> </div>
 					</ul>
 					<!-- script-for-menu -->

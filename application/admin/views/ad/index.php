@@ -29,7 +29,9 @@
 					<td><?php echo $val['summary']; ?></td>
 					<td class="f-14 td-manage">
 						<a style="text-decoration:none" class="ml-5" onClick="article_edit('公告编辑','<?php echo site_url("ad/edit_ad/$val[id]"); ?>')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+						<?php if ($val['id'] != 1) { ?>
 						<a style="text-decoration:none" class="ml-5" onClick="article_del('<?php echo site_url("ad/del_ad/$val[id]"); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
+                        <?php } ?>
 					</td>
 				</tr>
 				<?php } ?>

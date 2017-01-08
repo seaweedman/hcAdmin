@@ -1,5 +1,5 @@
 <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed">
-    <button type="button">留言</button>
+    <button type="button" style="opacity: 0.8;border-radius: 50px;font-size:19px;">留言</button>
     <div class="morph-content">
         <div>
             <div class="content-style-form content-style-form-1">

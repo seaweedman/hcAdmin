@@ -19,6 +19,8 @@ class Home extends CI_Controller {
 		$data['products'] = $this->product_model->get_list();
 		// 新闻消息
 		$data['news'] = $this->news_model->get_list();
+		// 企业宣传
+		$data['center'] = $this->ad_model->get_one();
 
         $this->load->view('header');
 		$this->load->view('home', $data);
