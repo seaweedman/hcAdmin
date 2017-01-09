@@ -35,12 +35,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 					<span class="menu"><img src="<?php echo base_url('static/images/menu.png'); ?>" alt=""></span>
 					<ul class="nav1">
-						<li class="hvr-sweep-to-bottom active"><a href="<?php echo site_url('Home/index'); ?>">首页<i>home</i></a></li>
-						<!-- <li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('About/index'); ?>">公司概况<i>about us</i></a></li> -->
-						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Products/index'); ?>">产品信息<i>products</i></a></li>
-						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('News/index'); ?>">新闻动态<i>news</i></a></li>
-						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('Contact/index'); ?>">客户留言<i>contact us</i></a></li>
-						<li class="hvr-sweep-to-bottom"><a href="<?php echo site_url('About/index'); ?>">关于我们<i>contact us</i></a></li>
+						<li class="hvr-sweep-to-bottom <?php if ($menu == 'home') { echo 'active'; } ?>"><a href="<?php echo site_url('Home/index'); ?>">首页<i>home</i></a></li>
+						<li class="hvr-sweep-to-bottom <?php if ($menu == 'products') { echo 'active'; } ?>"><a href="<?php echo site_url('Products/index'); ?>">产品信息<i>products</i></a></li>
+						<li class="hvr-sweep-to-bottom <?php if ($menu == 'news') { echo 'active'; } ?>"><a href="<?php echo site_url('News/index'); ?>">新闻动态<i>news</i></a></li>
+						<li class="hvr-sweep-to-bottom <?php if ($menu == 'contact') { echo 'active'; } ?>"><a href="<?php echo site_url('Contact/index'); ?>">客户留言<i>contact us</i></a></li>
+						<li class="hvr-sweep-to-bottom <?php if ($menu == 'about') { echo 'active'; } ?>"><a href="<?php echo site_url('About/index'); ?>">关于我们<i>contact us</i></a></li>
 						<div class="clearfix"> </div>
 					</ul>
 					<!-- script-for-menu -->

@@ -47,14 +47,14 @@ $(function () {
 					<h5>责任 荣誉 使命 传承</h5>
 					<p><?php echo $company['summary']; ?></p>
 					<div class="see-button">
-						<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="#" role="button">查看详情</a>
+						<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal" href="<?php echo site_url('about/index'); ?>" role="button">查看详情</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-5 banner-bottom-right wow fadeInRight animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
 				<img src="<?php echo base_url($company['img_url']); ?>" alt=""/>
 			</div>
-			<div class="clearfix"> </div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 	<!-- //container -->

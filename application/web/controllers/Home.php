@@ -21,9 +21,10 @@ class Home extends CI_Controller {
 		$data['news'] = $this->news_model->get_list();
 		// 企业宣传
 		$data['center'] = $this->ad_model->get_one();
+		$data['menu'] = 'home';
 
-        $this->load->view('header');
-		$this->load->view('home', $data);
+        $this->load->view('header', $data);
+		$this->load->view('home');
 		$this->load->view('footer');
 	}
 

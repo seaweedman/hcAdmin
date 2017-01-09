@@ -10,9 +10,10 @@ class Products extends CI_Controller {
 		$this->load->model('product_model');
 
         $data['list'] = $this->product_model->get_list();
+		$data['menu'] = 'products';
 
-        $this->load->view('header');
-		$this->load->view('products', $data);
+        $this->load->view('header', $data);
+		$this->load->view('products');
 		$this->load->view('footer');
 	}
 }

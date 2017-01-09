@@ -7,6 +7,10 @@ class Contact extends CI_Controller {
         // 加载url辅助类
         $this->load->helper('url_helper');
 
+        $data['menu'] = 'contact';
+
+        $this->load->view('header', $data);
 		$this->load->view('contact');
+		$this->load->view('footer');
 	}
 }
