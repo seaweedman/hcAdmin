@@ -21,6 +21,30 @@
 			</div>
 		</div>
 		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">通信地址：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" name="address" value="<?php echo empty($info['address']) ? '' : $info['address']; ?>">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">手机号：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" name="mobile" value="<?php echo empty($info['mobile']) ? '' : $info['mobile']; ?>">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">邮箱：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" name="mail" value="<?php echo empty($info['mail']) ? '' : $info['mail']; ?>">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">首页产品描述：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" placeholder="" name="products_content" value="<?php echo empty($info['products_content']) ? '' : $info['products_content']; ?>">
+			</div>
+		</div>
+		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">详细内容：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<script id="editor" name='content' type="text/plain" style="width:100%;height:400px;"><?php echo empty($info['content']) ? '' : $info['content']; ?></script>

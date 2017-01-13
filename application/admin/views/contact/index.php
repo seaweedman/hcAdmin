@@ -12,23 +12,20 @@
 		<table class="table table-border table-bordered table-bg table-hover table-sort">
 			<thead>
 				<tr class="text-c">
-					<th width='100'>标题</th>
-					<th width="80">简介</th>
-					<th width='100'>添加时间</th>
-					<th width="80">操作</th>
+					<th width='100'>手机号</th>
+					<th width="80">邮箱</th>
+					<th width='100'>留言内容</th>
+					<th width="80">留言时间</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php if (!empty($list)) { ?>
 				<?php foreach($list AS $val) { ?>
 				<tr class="text-c">
-					<td><?php echo $val['title']; ?></td>
-					<td><?php echo $val['summary']; ?></td>
+					<td><?php echo $val['mobile']; ?></td>
+					<td><?php echo $val['mail']; ?></td>
+					<td><?php echo $val['content']; ?></td>
 					<td><?php echo $val['create_time']; ?></td>
-					<td class="f-14 td-manage">
-						<a style="text-decoration:none" class="ml-5" onClick="article_edit('新闻编辑','<?php echo site_url("News/edit_news/$val[id]"); ?>')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-						<a style="text-decoration:none" class="ml-5" onClick="article_del('<?php echo site_url("News/del_news/$val[id]"); ?>')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
-					</td>
 				</tr>
 				<?php } ?>
 				<?php } ?>

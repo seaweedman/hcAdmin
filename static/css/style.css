@@ -46,7 +46,7 @@ body a {
 }
 .top-nav ul li a{
   color: #FFF;
-  /*font-size: 18px;*/
+  font-size: 18px;
   margin-right: .4em;
   float: left;
   /*padding: 5em 1em 3em;*/
@@ -477,7 +477,7 @@ a.btn.btn-primary.btn-lg.see-button.hvr-shutter-out-horizontal {
 }
 /*-- specialty --*/
 .specialty{
-  padding: 3em 0;
+  padding: 3em 0 0 0;
   background: #FAFAFA;
 }
 .specialty-info h3{
@@ -670,7 +670,7 @@ color: #333333;
 }
 /*-- footer --*/
 .footer{
-	padding:3em 0;
+	padding:1em 0;
 	background:#292929;
 }
 .footer-left ul{
@@ -693,7 +693,7 @@ color: #333333;
 	text-decoration:none;
 }
 .footer-left form{
-  margin-top: 3em;
+  margin-top: 1em;
 }
 .footer-left input[type="text"] {
   width: 100%;
@@ -1175,7 +1175,7 @@ span.menu {
 		font-size: 41px;
 	}
 	.banner {
-		min-height: 630px;
+		/*min-height: 630px;*/
 	}
 	.callbacks_tabs {
 	  top: 123%;
@@ -1235,7 +1235,7 @@ span.menu {
 		margin: 8em 0 0 0;
 	}
 	.banner {
-	  min-height: 560px;
+	  /*min-height: 560px;*/
 	}
 	.banner-bottom-left h3 {
 		font-size: 28px;

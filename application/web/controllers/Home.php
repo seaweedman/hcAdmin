@@ -31,17 +31,39 @@ class Home extends CI_Controller {
 	public function message() {
 		// 产品表
 		$this->load->model('contact_model');
+		$this->load->library('session');
 
-		// 手机号
-		$data['mobile'] = $_POST['mobile'];
-		// 邮箱
-		$data['mail'] = $_POST['mail'];
-		// 内容
-		$data['content'] = $_POST['content'];
-		// 当前时间
-		$data['create_time'] = date('Y-m-d H:i:s', time());
+        // 初始化返回数组
+		$return['flag'] = 1;
 
-		// 保存内容
-		$this->contact_model->add_message($data);
+        if (empty($_SESSION['times']) && $_SESSION['times'] != 0) {
+            $_SESSION['times'] = 0;
+		}
+
+		if ($_SESSION['times'] >= 10) {
+			$return['flag'] = 0;
+            $return['msg'] = '留言过于频繁请稍后再发';
+		} else {
+			// 手机号
+			$data['mobile'] = $_POST['mobile'];
+			// 邮箱
+			$data['mail'] = $_POST['mail'];
+			// 内容
+			$data['content'] = $_POST['content'];
+			// 当前时间
+			$data['create_time'] = date('Y-m-d H:i:s', time());
+
+			// 保存内容
+			$res = $this->contact_model->add_message($data);
+
+			if (empty($res)) {
+				$return['flag'] = 0;
+				$return['msg'] = '留言失败！';
+			}
+		}
+
+        $_SESSION['times'] ++;
+
+		echo json_encode($return);
 	}
 }

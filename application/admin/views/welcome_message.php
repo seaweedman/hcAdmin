@@ -82,9 +82,9 @@
 		<dl id="menu-system">
 			<dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
 			<dd>
-				<ul>
+				<!-- <ul>
 					<li><a data-href="<?php echo site_url('System/index'); ?>" data-title="系统设置" href="javascript:void(0)">系统设置</a></li>
-				</ul>
+				</ul> -->
 				<ul>
 					<li><a data-href="<?php echo site_url('Ad/index'); ?>" data-title="公告管理" href="javascript:void(0)">公告管理</a></li>
 				</ul>

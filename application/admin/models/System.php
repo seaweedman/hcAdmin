@@ -11,6 +11,10 @@ class System extends CI_Model {
         $data['summary'] = $_POST['summary'];
         $data['img_url'] = $img_url;
         $data['content'] = $_POST['content'];
+        $data['address'] = $_POST['address'];
+        $data['mobile'] = $_POST['mobile'];
+        $data['mail'] = $_POST['mail'];
+        $data['products_content'] = $_POST['products_content'];
 
         return $this->db->update('company', $data, array('id'=>1));
     }

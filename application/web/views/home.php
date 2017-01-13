@@ -67,19 +67,18 @@ $(function () {
 	<div class="container">
 		<div class="col-md-5 specialty-info wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;">
 			<h3>产品信息</h3>
-			<h5>工匠精神</h5>
-			<p>巴拉巴拉巴拉</p>
+			<h5></h5>
+			<p><?php echo $company['products_content']; ?></p>
 			<div class="see-button">
-				<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal specialty-button" href="#" role="button">查看更多</a>
+				<a class="btn btn-primary btn-lg see-button hvr-shutter-out-horizontal specialty-button" href="<?php echo site_url('products/index'); ?>" role="button">查看更多</a>
 			</div>
 		</div>
 		<div class="col-md-7 specialty-grids">
 			<div class="specialty-grids-top">
-
 				<?php foreach($products AS $val) { ?>
 				<div class="col-md-6 service-box wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 					<figure class="icon">
-						<img style='width:50px;padding-top:20px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
+						<a href="<?php echo site_url('products/info/'.$val['id']); ?>"><img style='width:50px;padding-top:20px;' src="<?php echo base_url($val['img_url']); ?>" alt="" /></a>
 					</figure>
 					<h5><?php echo $val['title']; ?></h5>
 					<p><?php echo $val['summary']; ?></p>
@@ -99,7 +98,7 @@ $(function () {
 	<div class="container">
 		<div class="testimonial-nfo wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 			<h3><?php echo $center['title'] ?></h3>
-			<h5>巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉吧</h5>
+			<h5></h5>
 		</div>
 		<div class="testimonial-grids wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 			<div class="testimonial-grid">
@@ -118,6 +117,7 @@ $(function () {
 		</div>
 		<div class="news-grids">
 			<?php foreach($news AS $val) { ?>
+		    <a href="<?php echo site_url('news/info/'.$val['id']); ?>">
 			<div class="col-md-3 news-grid wow bounceIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				<h4><?php echo $val['title'] ?></h4>
 				<span><?php echo $val['create_time'] ?></span>
@@ -126,6 +126,7 @@ $(function () {
 					<p><?php echo $val['summary'] ?></p>
 				</div>
 			</div>
+		    </a>
 			<?php } ?>
 			<div class="clearfix"> </div>
 		</div>
