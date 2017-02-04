@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * 新闻动态
  */
 class Ad extends MY_Controller {
-
     /**
      * 新闻动态列表
      *
@@ -24,7 +23,7 @@ class Ad extends MY_Controller {
 	}
 
     /**
-     * 编辑新闻
+     * 编辑广告
      */
     public function edit_ad($id=0) {
         // 加载url辅助类
@@ -57,12 +56,12 @@ class Ad extends MY_Controller {
         // 广告ID
         $id = $_POST['id'];
 
-        if (empty($_POST['title'])) {
-            $this->common->false('标题不能为空');
-        }
-        if (empty($_POST['summary'])) {
-            $this->common->false('简介不能为空');
-        }
+        // if (empty($_POST['title'])) {
+        //     $this->common->false('标题不能为空');
+        // }
+        // if (empty($_POST['summary'])) {
+        //     $this->common->false('简介不能为空');
+        // }
 
         if (!empty($_POST['img_url']) && strstr($_POST['img_url'], 'upload/')) {
             $img_url = $_POST['img_url'];
@@ -104,7 +103,7 @@ class Ad extends MY_Controller {
     }
 
     /**
-     * 删除新闻
+     * 删除广告
      */
     public function del_ad($id=0) {
         // 加载公共类

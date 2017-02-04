@@ -1,5 +1,5 @@
 <!-- //container -->
-<div class="container" style="width:100%;min-height:500px;padding-left:0px;padding-right:0px;">
+<div class="container" style="width:100%;padding-left:0px;padding-right:0px;">
 <script src="<?php echo base_url('static/js/responsiveslides.min.js'); ?>"></script>
 <script>
 // You can also use "$(window).load(function() {"
@@ -24,7 +24,7 @@ $(function () {
 <div id="top" class="callbacks_container">
 	<ul class="rslides" id="slider3">
 		<?php foreach($ads AS $val) { ?>
-		<li style='background:url(<?php echo base_url($val['img_url']); ?>) no-repeat 0px 0px #eeece9; width:100%;height:500px;'>
+		<li style='background:url(<?php echo base_url($val['img_url']); ?>) #eeece9;background-size: 100% 100%; -moz-background-size: 100% 100%; -webkit-background-size: 100% 100%;'>
 			<div class="banner-info">
 					<h2><?php echo $val['title']; ?></h2>
 					<div class="line"> </div>
@@ -43,7 +43,7 @@ $(function () {
 		<div class="banner-bottom-grids">
 			<div class="col-md-7 banner-bottom-grid-text">
 				<div class="jumbotron banner-bottom-left wow fadeInLeft animated" data-wow-delay="0.5s" style="visibility: visible; -webkit-animation-delay: 0.5s;	">
-				  <h3>山河商贸-公司简介</h3>
+				  <h3>河山商贸-公司简介</h3>
 					<h5>责任 荣誉 使命 传承</h5>
 					<p><?php echo $company['summary']; ?></p>
 					<div class="see-button">
@@ -123,7 +123,7 @@ $(function () {
 				<span><?php echo $val['create_time'] ?></span>
 				<img style='width;280px;height:200px;' src="<?php echo base_url($val['img_url']); ?>" alt="" />
 				<div class="news-info">
-					<p><?php echo $val['summary'] ?></p>
+					<p style='min-height:152px;'><?php echo $val['summary'] ?></p>
 				</div>
 			</div>
 		    </a>

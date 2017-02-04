@@ -23,7 +23,7 @@
 </head>
 <body>
 <input type="hidden" id="TenantId" name="TenantId" value="" />
-<!-- <div class="header">山河商贸-后台管理</div> -->
+<!-- <div class="header">河山商贸-后台管理</div> -->
 <div class="loginWraper">
   <div id="loginform" class="loginBox">
     <form class="form form-horizontal" action="<?php echo site_url('Login/check'); ?>" method="post">
@@ -58,7 +58,7 @@
     </form>
   </div>
 </div>
-<div class="footer">Copyright 山河商贸 by zjr.</div>
+<div class="footer">Copyright 河山商贸 by zjr.</div>
 <script type="text/javascript" src="<?php echo base_url('static/hui/lib/jquery/1.9.1/jquery.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('static/hui/static/h-ui/js/H-ui.js'); ?>"></script>
 <!-- <script>

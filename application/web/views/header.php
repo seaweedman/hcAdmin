@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>山河商贸</title>
+<title>河山商贸</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Tillage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -30,7 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container" style="background:black;width:100%;height:80px;">
 			<div class="header">
 				<div class="head-logo" >
-					<a href="index.html"><img src="<?php echo base_url('static/images/logo.jpg'); ?>" alt="山河商贸" style='width:100px;' /></a>
+					<a href="index.html"><img src="<?php echo base_url('static/images/logo.jpg'); ?>" alt="河山商贸" style='width:100px;' /></a>
 				</div>
 				<div class="top-nav">
 					<span class="menu"><img src="<?php echo base_url('static/images/menu.png'); ?>" alt=""></span>

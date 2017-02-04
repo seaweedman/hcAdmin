@@ -20,7 +20,7 @@
 
 <!-- footer -->
 <div class="footer" style='text-align:center'>
-    <span style='color:#fff;margin:0 auto;font-size:12px;font-weight:100'>山河商贸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲁ICP备17001935&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright <?php echo date('Y'); ?></span>
+    <span style='color:#fff;margin:0 auto;font-size:12px;font-weight:100'>河山商贸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鲁ICP备17001935&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copyright <?php echo date('Y'); ?></span>
 </div>
 <!-- //footer -->
 
